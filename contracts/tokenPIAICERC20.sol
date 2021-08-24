@@ -47,6 +47,7 @@ contract ASSGNMT_ERC20 is ERC20,Ownable,Pausable{
         transfer(receiver, amount);
     }
     
+    //Function for setting time Limit for transaction of tokens
     function setTimeLimitForTransaction(uint256 numOfDays) public onlyOwner{
         timelimit = block.timestamp + (numOfDays * 1 days );
     }
